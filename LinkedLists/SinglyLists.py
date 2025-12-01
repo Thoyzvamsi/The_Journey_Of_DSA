@@ -60,11 +60,14 @@ class Linkedlist:
         
 
     def PrintList(self):
-        temp = self.head
-        while temp:
-            print(temp.value,end=" -> ")
-            temp = temp.next
-        print("None")
+        if self.head is None:
+            print("List is empty.")
+        else:
+            temp = self.head
+            while temp:
+                print(temp.value,end=" -> ")
+                temp = temp.next
+            print("None")
 
 ll = Linkedlist()
 ll.insertAtEnd(1)
