@@ -18,6 +18,26 @@ def insert(root,value):
 
     return root
 
+#Inorder Traversal
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.value,end=" ")
+        inorder(root.right)
+
+#Preorder Traversal
+def preorder(root):
+    if root:
+        print(root.value,end=" ")
+        preorder(root.left)
+        preorder(root.right)
+
+#Postorder Traversal
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.value,end=" ")
 
 ls = list(map(int,input("Enter elements of the tree:").split()))
 root = None
@@ -25,11 +45,8 @@ root = None
 for i in ls:
     root = insert(root,i)
 
-def inorder(root):
-    if root:
-        inorder(root.left)
-        print(root.value,end=" ")
-        inorder(root.right)
-
 inorder(root)
-
+print("")
+preorder(root)
+print("")
+postorder(root)
