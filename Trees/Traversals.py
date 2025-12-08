@@ -1,6 +1,7 @@
 # BST : Binary Search Tree where smaller element added to left side of the parent and
 # Bigger elment is added to the right side of the parent
 
+#Creating a Binary Search Tree
 class Node:
     def __init__(self,value):
         self.value = value
