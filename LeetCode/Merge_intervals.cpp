@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+// Merge intervals
 
 // Approach
 // Linear approuch , sorting the array based on first element then,
